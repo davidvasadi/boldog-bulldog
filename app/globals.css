@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(201, 183, 156, 0.25), transparent),
+    radial-gradient(900px 500px at -10% 20%, rgba(232, 220, 200, 0.4), transparent);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(201, 183, 156, 0.5);
+}
+
+/* Üveg-kártya alap (glassmorphism) */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-dark {
+  background: rgba(46, 38, 32, 0.45);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Egyedi, finom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 183, 156, 0.6);
+  border-radius: 999px;
+}
